@@ -62,7 +62,25 @@ However, features adding should be used carefully, as adding more features does 
 |:--:|
 |**Figure 8**: Overall image preprocessing|
 
+# Evaluation Algorithm
+As the ground truth and the segmented image may have different number of clusters, it is necessary to create a cluster matching algorithm 
+before evaluating the segmenting performance. The overall algorithm is as follow:
 
+![image](https://github.com/komxun/Image-Segmentation-with-Clustering/assets/133139057/ecadb916-612a-4518-9761-cdfeb3548c09)
+
+In this work, the Jaccard similarity has been used and the similarity threshold has been set to be
+≥40%. This algorithm has been custom coded in a function **binaryMatch()** in MATLAB.
+
+
+
+
+
+# References
+[1] T. Verma and N. Patel, "Data Clustering: Algorithms and Applications", Springer, 2020. 
+
+[2] S. Kumar. “C-Means Clustering Explained” Builtin.  https://builtin.com/data-science/c-means (accessed Feb. 5, 2023)
+
+[3] S. Ghosh and  S. Kumar Dubey “Comparative Analysis of K-Means and Fuzzy C-Means Algorithms”, IJACSA, 2013 
 
 
 
