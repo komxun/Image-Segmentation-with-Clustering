@@ -1,4 +1,5 @@
 # Image-Segmentation-with-Clustering
+# Introduction
 The supervised approach (classification) classifies the data based on the model obtained from the training of labeled data. 
 The supervised approach highly depends on the labeled training data and often require large number of training data set and 
 high computational power during the model training phase. On the other hand, the unsupervised approach (clustering) groups the data without any the prior data training. 
@@ -64,7 +65,7 @@ However, features adding should be used carefully, as adding more features does 
 |:--:|
 |**Figure 8**: Overall image preprocessing|
 
-# Evaluation Algorithm
+#Evaluation Algorithm
 As the ground truth and the segmented image may have different number of clusters, it is necessary to create a cluster matching algorithm 
 before evaluating the segmenting performance. The overall algorithm is as follow:
 
@@ -82,6 +83,72 @@ https://github.com/komxun/Image-Segmentation-with-Clustering/blob/43d9bd44285e18
 |![image](https://github.com/komxun/Image-Segmentation-with-Clustering/assets/133139057/668a1ae4-f0e0-4882-996f-0717310368ab)|
 |:--:|
 |**Figure 11**: Segmentation evaluation scheme for each image|
+
+# Results
+## Segmentation Results
+|![image](https://github.com/komxun/Image-Segmentation-with-Clustering/assets/133139057/21f27b7a-267f-4d04-a412-8888db990afe)|
+|:--:|
+|**Figure 14**: Segmentation results for image 1|
+
+|![image](https://github.com/komxun/Image-Segmentation-with-Clustering/assets/133139057/24fd156f-b19d-4bb7-96a8-06541894a20a)|
+|:--:|
+|**Figure 15**: Segmentation results for image 2|
+
+|![image](https://github.com/komxun/Image-Segmentation-with-Clustering/assets/133139057/c6d36dcd-4de6-4e08-b963-33ed17b4c2a1)|
+|:--:|
+|**Figure 16**: Segmentation results for image 3|
+
+|![image](https://github.com/komxun/Image-Segmentation-with-Clustering/assets/133139057/0f748108-d528-47e9-ba00-23f3e1d567ae)|
+|:--:|
+|**Figure 17**: Segmentation results for image 4|
+
+|![image](https://github.com/komxun/Image-Segmentation-with-Clustering/assets/133139057/b34d5b44-a7aa-4cde-8c89-3b8d2a96bda0)|
+|:--:|
+|**Figure 18**: Segmentation results for image 5|
+
+## Evaluation Results
+Here, only the cluster matching of the FCM technique has been plotted since the clusters from Mean Shift clustering are highly detailed and the number of clusters also vary drastically. 
+|![image](https://github.com/komxun/Image-Segmentation-with-Clustering/assets/133139057/2eae3f71-3fae-4a33-bdf0-79d1ed4d569a)|
+|:--:|
+|**Figure 19**: Cluster matching result for image 1 with FCM-based segmentation|
+
+|![image](https://github.com/komxun/Image-Segmentation-with-Clustering/assets/133139057/d21a1878-6777-430f-a125-8f555dd093c0)|
+|:--:|
+|**Figure 20**: Cluster matching result for image 2 with FCM-based segmentation|
+
+|![image](https://github.com/komxun/Image-Segmentation-with-Clustering/assets/133139057/aee7c39c-7d32-4844-a5e9-e0f163a02f7f)|
+|:--:|
+|**Figure 21**: Cluster matching result for image 3 with FCM-based segmentation|
+
+|![image](https://github.com/komxun/Image-Segmentation-with-Clustering/assets/133139057/fd900b44-e7b9-4ff2-9fb5-85a39d36528d)|
+|:--:|
+|**Figure 22**: Cluster matching result for image 4 with FCM-based segmentation|
+
+|![image](https://github.com/komxun/Image-Segmentation-with-Clustering/assets/133139057/fad77b73-6077-4c0b-863c-57744c57bb21)|
+|:--:|
+|**Figure 23**: Cluster matching result for image 5 with FCM-based segmentation|
+
+|![image](https://github.com/komxun/Image-Segmentation-with-Clustering/assets/133139057/a2768b88-a9d5-4866-9c3f-04ace399c0e3)|
+|:--:|
+|**Figure 24**: Segmentation performance scores for FCM and Mean shift clustering technique on five images|
+
+# Evaluation Results Discussion
+It can be seen from Figure 19 - Figure 23 that the clusters matching algorithm works very well in matching the obtained segments with ground truth segments, 
+making the evaluated scores highly reliable. According to Figure 24,by evaluating both techniques for 5 images, FCM clustering technique gave higher performance as expected. 
+
+Nonetheless, as shown Figure 25, after evaluating for 200 images, the Mean Shift clustering techniques gave higher precision and accuracy than FCM. This implies the result from Mean Shift clustering has low number of False Positive (FP) data. This is because the number of clusters for the FCM clustering has been fixed to three clusters which is a very strict constraints, while the number of cluster in Mean Shift clustering is determined automatically. In spite of that, FCM clustering still has the highest average recall, indicating that FCM has higher number of True Positive (TP) data and lower False Negative (FN) data.
+
+|![image](https://github.com/komxun/Image-Segmentation-with-Clustering/assets/133139057/5d218830-1643-4eaf-8cfb-b16f2dd10db3)|
+|:--:|
+|**Figure 25**: Segmentation performance evaluated for 200 images|
+
+# Conclusion
+K-means clustering technique should only be used if the computational cost is at concern. Fuzzy C-Means (FCM) clustering gives the most consistent performance if a prior information of the image is known, or if the number of segmentations can be approximated. Lastly, Mean Shift clustering technique has the highest flexibility and is most suitable for segmenting an unknown image.
+
+Image preprocessing can significantly improve the performance for any segmentation techniques. However, it should be done carefully as some process may remove important image features resulting in a wrong segmentation.
+
+
+
 
 
 # References
