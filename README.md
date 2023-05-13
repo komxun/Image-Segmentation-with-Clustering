@@ -8,9 +8,11 @@ and the number of clusters chosen.
 Examples: K-Means clustering, Fuzzy C-Means clustering, Mean shift clustering, Support Vector Machine (SVM), 
 
 ## Clustering VS Classification
-| | Advantages | Disadvantages |
-| --- | --- | --- |
-| Clustering (Unsupervised) | - Doesn't require any prior knowledge of the data \newline - Suitable for evaluating new type of data- Can discover new data pattern- Simpler to implement
+![image](https://github.com/komxun/Image-Segmentation-with-Clustering/assets/133139057/8c174b56-c4ad-45f2-8c60-9c1426c2e728)
+
+## Comparison between different clustering techniques
+![image](https://github.com/komxun/Image-Segmentation-with-Clustering/assets/133139057/651e8aaa-74a5-4dba-bbe0-bed782b1e737)
+
 
 
 # Image Preprocessing
@@ -71,8 +73,15 @@ before evaluating the segmenting performance. The overall algorithm is as follow
 In this work, the Jaccard similarity has been used and the similarity threshold has been set to be
 ≥40%. This algorithm has been custom coded in a function **binaryMatch()** in MATLAB.
 
+https://github.com/komxun/Image-Segmentation-with-Clustering/blob/43d9bd44285e1812698b5dd94de3026bbaa2c357/Main_Clustering.m#L379-L466
 
+|![image](https://github.com/komxun/Image-Segmentation-with-Clustering/assets/133139057/61d84a89-97fe-4bd9-9e25-c6780178044b)|
+|:--:|
+|**Figure 10**: Clusters matching algorithm scheme|
 
+|![image](https://github.com/komxun/Image-Segmentation-with-Clustering/assets/133139057/668a1ae4-f0e0-4882-996f-0717310368ab)|
+|:--:|
+|**Figure 11**: Segmentation evaluation scheme for each image|
 
 
 # References
