@@ -70,7 +70,7 @@ However, features adding should be used carefully, as adding more features does 
 |:--:|
 |**Figure 8**: Overall image preprocessing|
 
-#Evaluation Algorithm
+# Evaluation Algorithm
 As the ground truth and the segmented image may have different number of clusters, it is necessary to create a cluster matching algorithm 
 before evaluating the segmenting performance. The overall algorithm is as follow:
 
