@@ -70,6 +70,10 @@ However, features adding should be used carefully, as adding more features does 
 |:--:|
 |**Figure 8**: Overall image preprocessing|
 
+The aforementioned methods have been custom coded in **preproc()** function:
+
+https://github.com/komxun/Image-Segmentation-with-Clustering/blob/77865663372ae387400b321783d9c5f6bb584ce1/Main_Clustering.m#L322-L376
+
 # Evaluation Algorithm
 As the ground truth and the segmented image may have different number of clusters, it is necessary to create a cluster matching algorithm 
 before evaluating the segmenting performance. The overall algorithm is as follow:
