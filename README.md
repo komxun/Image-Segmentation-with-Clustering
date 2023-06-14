@@ -1,5 +1,14 @@
 # Image-Segmentation-with-Clustering
 # Introduction
+A typical digital image processing system can be divided into three phases: image pre-processing, image analysis, and decision-making phase [1]. 
+The pre-processing phase includes image enhancement, noise filtering, and image compression. Image segmentation belongs to the analysis phase before the decision-making phase as shown in Figure 1. In general, image segmentation is the initial step before performing a higher-level operation such as object detection, tracking, and classification.  
+
+|![image](https://github.com/komxun/Image-Segmentation-with-Clustering/assets/133139057/4bf3a359-ae3a-484f-87d9-16e9229a5455)|
+|:--:|
+|Figure 1. Digital image processing steps|
+
+
+
 The supervised approach (classification) classifies the data based on the model obtained from the training of labeled data. 
 The supervised approach highly depends on the labeled training data and often require large number of training data set and 
 high computational power during the model training phase. On the other hand, the unsupervised approach (clustering) groups the data without any the prior data training. 
@@ -9,7 +18,13 @@ and the number of clusters chosen.
 Examples: K-Means clustering, Fuzzy C-Means clustering, Mean shift clustering, Support Vector Machine (SVM), 
 
 ## Clustering VS Classification
+
+The advantages and disadvantages of each segmentation techniques are summarized in table below:
 ![image](https://github.com/komxun/Image-Segmentation-with-Clustering/assets/133139057/8c174b56-c4ad-45f2-8c60-9c1426c2e728)
+
+There are many clustering techniques that can be implemented for image segmentation. In this work, the K-Means clustering, 
+the Fuzzy C-Means (FCM) clustering, and Mean Shift clustering have been chosen as candidate algorithms. 
+The advantages and disadvantages for each techniques can be found in table below:
 
 ## Comparison between different clustering techniques
 ![image](https://github.com/komxun/Image-Segmentation-with-Clustering/assets/133139057/651e8aaa-74a5-4dba-bbe0-bed782b1e737)
